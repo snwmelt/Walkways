@@ -41,12 +41,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MVVM\AObservable.cs" />
-    <Compile Include="MVVM\CommandRelay.cs" />
+    <Compile Include="MVVM\View Model\INPCInvoke.cs" />
+    <Compile Include="MVVM\View Model\CommandRelay.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="MVVM\Interface\" />
+    <Folder Include="MVVM\Model\Interfaces\" />
     <Folder Include="MVVM\View Model\Interface\" />
     <Folder Include="MVVM\View\Interface\" />
   </ItemGroup>

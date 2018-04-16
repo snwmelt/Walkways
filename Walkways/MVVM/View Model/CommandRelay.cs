@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Input;
 
-namespace Walkways.MVVM
+namespace Walkways.MVVM.View_Model
 {
     /// <summary>
     /// An Implementation of The ICommand Interface That Supports Actions Following The Signiture A<T>(T Value).
@@ -23,8 +23,6 @@ namespace Walkways.MVVM
         /// <param name="Predicate">Predicate to Determine If The Action Parameter Can Be Executed.</param>
         public CommandRelay( Action< T > Action, Predicate< T > Predicate = null )
         {
-            
-
             _Action    = Action;
             _Predicate = Predicate;
         }
