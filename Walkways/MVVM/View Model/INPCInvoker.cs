@@ -8,7 +8,7 @@ namespace Walkways.MVVM.View_Model
     /// A Class for use with the INotifyPropertyChanged property PropertyChanged.
     /// Raises PropertyChanged event arbitrarily, or on assinging new value to a referenced property from the calling class.
     /// </summary>
-    public class INPCInvoke
+    public class INPCInvoker
     {
         #region Private Variables
 
@@ -20,7 +20,7 @@ namespace Walkways.MVVM.View_Model
         /// INotifyPropertyChanged implementating class.
         /// </summary>
         /// <param name="Sender"></param>
-        public INPCInvoke( INotifyPropertyChanged Sender )
+        public INPCInvoker( INotifyPropertyChanged Sender )
         {
             _Sender = Sender;
         }

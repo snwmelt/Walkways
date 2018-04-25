@@ -31,6 +31,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -41,8 +42,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MVVM\View Model\INPCInvoke.cs" />
+    <Compile Include="MVVM\View Model\INPCInvoker.cs" />
     <Compile Include="MVVM\View Model\CommandRelay.cs" />
+    <Compile Include="MVVM\View\InverseBooleanConverter.cs" />
+    <Compile Include="MVVM\View\MultiValueBooleanToVisibilityConverter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
