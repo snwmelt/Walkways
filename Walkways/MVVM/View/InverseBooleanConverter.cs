@@ -21,7 +21,12 @@ namespace Walkways.MVVM.View
 
         public object ConvertBack( object value, Type targetType, object parameter, CultureInfo culture )
         {
-            throw new NotImplementedException( );
+            if ( !( value is Boolean ) )
+            {
+                throw new InvalidOperationException( "Target Type Must be a Boolean." );
+            }
+
+            return !( Boolean )value;
         }
     }
 }
