@@ -6,15 +6,28 @@ using System.Windows.Data;
 namespace Walkways.MVVM.View
 {
     /// <summary>
-    /// Parses n+ Bool(ean)s translating the agrigate of their values into a System.Windows.Visibility object.
+    /// Parses n+ System.Boolean objects translating the agrigate of their values into a System.Windows.Visibility object.
     /// </summary>
     public class MultiValueBooleanToVisibilityConverter : IMultiValueConverter
     {
-        public object Convert( object[] values, Type targetType, object parameter, CultureInfo culture )
+        /// <summary>
+        /// Returns a System.Windows.Visibility Object Given The Values Of N+ System.Boolean Objects.
+        /// </summary>
+        /// <param name="values">An Array Containing System.Boolean Objects.</param>
+        /// <param name="targetType">System.Windows.Data.IMultiValueConverter Target System.Type.</param>
+        /// <param name="parameter">System.Windows.Data.IMultiValueConverter Source System.Object.</param>
+        /// <param name="culture">System.Windows.Data.IMultiValueConverter Source System.Globalization.CultureInfo.</param>
+        /// <returns>System.Windows.Visibility Result.</returns>
+        public object Convert( object[] values, Type targetType = null, object parameter = null, CultureInfo culture = null )
         {
-            foreach ( object v in values )
+            foreach ( object value in values )
             {
-                if ( ( v is bool ) && !( Boolean )v )
+                if ( !( value is Boolean ) )
+                {
+                    throw new InvalidOperationException( "Target Type Must be a Boolean." );
+                }
+
+                if ( !( Boolean )value )
                 {
                     return Visibility.Collapsed;
                 }
